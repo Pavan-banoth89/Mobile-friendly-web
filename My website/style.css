@@ -1,0 +1,159 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  line-height: 1.6;
+  text-align: center;
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center fixed;
+  background-size: cover;
+  transition: background-image 1s ease-in-out;
+  position: relative;
+  min-height: 100vh;
+}
+
+.overlay {
+  position: fixed; top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: -1;
+}
+
+/* Hero Section */
+.hero {
+  padding: 100px 20px;
+  background: rgba(0,0,0,0.5);
+}
+.hero h1 {
+  font-size: 3rem;
+  color: #ffcc70;
+}
+.hero p { margin: 15px 0; font-size: 1.2rem; }
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #ffcc70;
+  color: #000;
+  font-weight: bold;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn:hover { background: #fff; color: #000; }
+
+/* Navigation */
+header {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav-links li { margin: 10px; }
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.nav-links li a:hover { color: #ffcc70; }
+
+/* Sign Out Button */
+.signout a {
+  color: #ffcc70;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px 15px;
+  border: 2px solid #ffcc70;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+.signout a i {
+  margin-right: 5px;
+}
+.signout a:hover {
+  background: #ffcc70;
+  color: #000;
+}
+
+/* Sections */
+main { padding: 30px; }
+.intro, .services, .contact {
+  background: rgba(0,0,0,0.6);
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 900px;
+}
+h2 { color: #ffcc70; margin-bottom: 15px; }
+
+/* Services */
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  flex: 1 1 200px;
+  border-radius: 15px;
+  transition: transform 0.3s, background 0.3s;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+.card i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.card:hover {
+  transform: scale(1.05);
+  background: rgba(255, 204, 112, 0.9);
+  color: #000;
+}
+
+/* Contact */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact input, .contact textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+.contact button {
+  border: none;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background: rgba(0,0,0,0.7);
+  padding: 15px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.2rem; }
+  nav { flex-direction: column; gap: 10px; }
+  .card-container { flex-direction: column; }
+}
+@media (max-width: 480px) {
+  .hero h1 { font-size: 1.8rem; }
+  .intro, .services, .contact { padding: 15px; }
+}
